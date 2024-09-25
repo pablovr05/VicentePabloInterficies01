@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    final int WINDOW_WIDTH = 600;
-    final int WINDOW_HEIGHT = 400;
+    final int WINDOW_WIDTH = 900;
+    final int WINDOW_HEIGHT = 600;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -20,12 +20,17 @@ public class Main extends Application {
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
-        stage.setTitle("JavaFX App");
+        stage.setTitle("NintendoDB");
+        stage.getIcons().add(new Image("/assets/images/nintendo.png"));
         stage.setWidth(WINDOW_WIDTH);
         stage.setHeight(WINDOW_HEIGHT);
+        stage.setMinWidth(350);
+        stage.setMinHeight(600);
+        stage.setMaxWidth(900);
+        stage.setMaxHeight(600);
+
         stage.show();
 
-        // Afegeix una icona només si no és un Mac
         if (!System.getProperty("os.name").contains("Mac")) {
             Image icon = new Image("file:icons/icon.png");
             stage.getIcons().add(icon);

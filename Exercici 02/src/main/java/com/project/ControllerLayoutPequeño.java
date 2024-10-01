@@ -1,10 +1,16 @@
 package com.project;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
+import java.io.IOException;
 
 public class ControllerLayoutPequeño {
+
+    public static String typeMode = "null";
 
     @FXML
     private Button botonPersonatges;
@@ -20,11 +26,24 @@ public class ControllerLayoutPequeño {
         Button clickedButton = (Button) event.getSource();
         
         if (clickedButton == botonPersonatges) {
-            System.out.println("Personatges");
+            typeMode = "Personatges";
+            cambiarPantallaPreDetailed();
         } else if (clickedButton == botonJocs) {
-            System.out.println("Jocs");
+            typeMode = "Jocs";
+            cambiarPantallaPreDetailed();
         } else if (clickedButton == botonConsoles) {
-            System.out.println("Consoles");
+            typeMode = "Consoles";
+            cambiarPantallaPreDetailed();
         }
     }
+
+    private void cambiarPantallaPreDetailed() {
+      try {
+         Parent ventanaPreDetailed = (Parent)FXMLLoader.load(this.getClass().getResource("/assets/layoutPreDetailed.fxml"));
+         Scene scene = Main.scene;
+         scene.setRoot(ventanaPreDetailed);
+      } catch (IOException var2) {
+         var2.printStackTrace();
+      }
+   }
 }

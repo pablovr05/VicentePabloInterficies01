@@ -7,17 +7,21 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.List;
 
 public class Main extends Application {
 
     final int WINDOW_WIDTH = 900;
     final int WINDOW_HEIGHT = 600;
-    private Scene scene;
+    public static Scene scene;
+
+    public static List<Personatge> llistaPersonatges = JsonReaderPersonatges.crearPersonajesDesdeJSON("C:/Users/pablo/Desktop/VicentePabloInterficies01/Exercici 02/src/main/resources/assets/data/personatges.json");
+    public static List<Joc> listaJocs = JsonReaderJocs.crearJocsDesdeJSON("C:/Users/pablo/Desktop/VicentePabloInterficies01/Exercici 02/src/main/resources/assets/data/jocs.json");
+    public static List<Consola> listaConsoles = JsonReaderConsoles.crearConsolesDesdeJSON("C:/Users/pablo/Desktop/VicentePabloInterficies01/Exercici 02/src/main/resources/assets/data/consoles.json");
 
     @Override
     public void start(Stage stage) throws Exception {
 
-        // Carrega la vista inicial des del fitxer FXML
         Parent root = FXMLLoader.load(getClass().getResource("/assets/layoutGrande.fxml"));
         scene = new Scene(root);
 

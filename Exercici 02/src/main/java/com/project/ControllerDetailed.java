@@ -63,7 +63,6 @@ public class ControllerDetailed {
             colorPane.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(2))));
             colorText.setText(ControllerPreDetailed.color);
             gameTitle.setText("Data de sortida: " + ControllerPreDetailed.data);
-
         }
     }
 

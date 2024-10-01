@@ -1,22 +1,22 @@
 package com.project;
 
 public class Joc {
-    private String nombre;
+    private String nom;
     private int any;
     private String tipo;
     private String descripcion;
     private String imagen;
 
-    public Joc(String nombre, int any, String tipo, String descripcion, String imagen) {
-        this.nombre = nombre;
+    public Joc(String nom, int any, String tipo, String descripcion, String imagen) {
+        this.nom = nom;
         this.any = any;
         this.tipo = tipo;
         this.descripcion = descripcion;
         this.imagen = imagen;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNom() {
+        return nom;
     }
 
     public int getAny() {
@@ -38,7 +38,7 @@ public class Joc {
     @Override
     public String toString() {
         return "Joc{" +
-                "nombre='" + nombre + '\'' +
+                "nombre='" + nom + '\'' +
                 ", any=" + any +
                 ", tipo='" + tipo + '\'' +
                 ", descripcion='" + descripcion + '\'' +

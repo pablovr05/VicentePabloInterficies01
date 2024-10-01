@@ -30,9 +30,12 @@
             </Button>
          </children>
       </Pane>
-      <ScrollPane fx:id="scrollPanel" prefHeight="494.0" prefWidth="350.0">
+      <ScrollPane fx:id="scrollPanel" prefHeight="538.0" prefWidth="350.0">
          <VBox.margin>
-            <Insets bottom="5.0" />
-         </VBox.margin></ScrollPane>
+            <Insets />
+         </VBox.margin>
+         <content>
+            <VBox fx:id="vBoxContainer" prefHeight="95.0" prefWidth="338.0" />
+         </content></ScrollPane>
    </children>
 </VBox>

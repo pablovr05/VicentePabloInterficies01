@@ -3,15 +3,15 @@ package com.project;
 import java.time.LocalDate;
 
 public class Consola {
-    private String nombre;
+    private String nom;
     private LocalDate fechaLanzamiento;
     private String procesador;
     private String color;
     private int unidadesVendidas;
     private String imagen;
 
-    public Consola(String nombre, LocalDate fechaLanzamiento, String procesador, String color, int unidadesVendidas, String imagen) {
-        this.nombre = nombre;
+    public Consola(String nom, LocalDate fechaLanzamiento, String procesador, String color, int unidadesVendidas, String imagen) {
+        this.nom = nom;
         this.fechaLanzamiento = fechaLanzamiento;
         this.procesador = procesador;
         this.color = color;
@@ -19,8 +19,8 @@ public class Consola {
         this.imagen = imagen;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNom() {
+        return nom;
     }
 
     public LocalDate getFechaLanzamiento() {
@@ -46,7 +46,7 @@ public class Consola {
     @Override
     public String toString() {
         return "Consola{" +
-                "nombre='" + nombre + '\'' +
+                "nombre='" + nom + '\'' +
                 ", fechaLanzamiento=" + fechaLanzamiento +
                 ", procesador='" + procesador + '\'' +
                 ", color='" + color + '\'' +

@@ -12,13 +12,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerPreDetailed">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerDetailed">
    <children>
       <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="61.0" prefWidth="350.0" style="-fx-background-color: #99CCFF;">
          <children>
             <Text fx:id="textTitle" layoutX="91.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: SansSerif; -fx-font-size: 36;" textAlignment="CENTER" wrappingWidth="217.41273498535156">
                <font>
-                  <Font name="SansSerif Regular" size="36.0" />
+                  <Font name="SansSerif Regular" size="18.0" />
                </font>
             </Text>
             <Button fx:id="backButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#backAction" style="-fx-background-color: null;" textFill="#ffffff00" textOverrun="CLIP">
@@ -37,32 +37,41 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="298.40001525878904" minHeight="10.0" prefHeight="79.40001411437989" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="386.60001373291016" minHeight="10.0" prefHeight="233.59999389648436" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="298.40001525878904" minHeight="10.0" prefHeight="243.00000762939453" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="386.60001373291016" minHeight="10.0" prefHeight="68.59999237060549" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="363.0000518798828" minHeight="10.0" prefHeight="96.40001220703124" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="363.0000518798828" minHeight="10.0" prefHeight="93.99998779296874" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="imagePixel" fitHeight="177.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+            <ImageView fx:id="imagePixel" fitHeight="177.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
                <GridPane.margin>
-                  <Insets left="45.0" />
+                  <Insets left="65.0" />
                </GridPane.margin>
             </ImageView>
-            <Text fx:id="textTitle2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="347.7367057800293">
+            <Text fx:id="textTitle2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="347.7367057800293" GridPane.rowIndex="1">
                <font>
                   <Font name="SansSerif Regular" size="24.0" />
                </font>
             </Text>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Pane layoutX="99.0" layoutY="34.0" prefHeight="27.0" prefWidth="27.0" />
-                  <Text fx:id="colorText" layoutX="164.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Pane fx:id="colorPane" layoutX="99.0" layoutY="34.0" prefHeight="27.0" prefWidth="27.0" />
+                  <Text fx:id="colorText" layoutX="1.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="347.7367057800293" />
                </children>
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                <children>
-                  <Text fx:id="gameTitle" layoutX="164.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="gameTitle" layoutX="9.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="331.79998779296864">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Text>
                </children>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="7.0" right="7.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets right="7.0" />
+               </padding>
             </Pane>
          </children>
       </GridPane>

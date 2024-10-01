@@ -18,8 +18,6 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 
-import javax.swing.border.EmptyBorder;
-
 public class ControllerPreDetailed {
 
     @FXML
@@ -81,6 +79,7 @@ public class ControllerPreDetailed {
             imatge = personatge.getImatge();
             color = personatge.getColor();
             nomVideojoc = personatge.getNomDelVideojoc();
+            cambiarPantallaDetailed();
         });    
     }
    }
@@ -94,6 +93,7 @@ public class ControllerPreDetailed {
             tipus = joc.getTipo();
             descripció = joc.getDescripcion();
             imatge = joc.getImagen();
+            cambiarPantallaDetailed();
         });
     }
    }
@@ -108,6 +108,7 @@ public class ControllerPreDetailed {
             color = consola.getColor();
             venudes = consola.getUnidadesVendidas() + "";
             imatge = consola.getImagen();
+            cambiarPantallaDetailed();
         });
     }
    }
@@ -138,4 +139,14 @@ public class ControllerPreDetailed {
 
     vBoxContainer.getChildren().add(panel); // Añade el panel al VBox
     }
+
+    private void cambiarPantallaDetailed() {
+        try {
+           Parent ventanaDetailed = (Parent)FXMLLoader.load(this.getClass().getResource("/assets/layoutItemDesc.fxml"));
+           Scene scene = Main.scene;
+           scene.setRoot(ventanaDetailed);
+        } catch (IOException var2) {
+           var2.printStackTrace();
+        }
+     }
 }

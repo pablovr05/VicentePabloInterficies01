@@ -5,6 +5,7 @@ com\project\ControllerLayoutGrande.class
 com\project\ControllerLayoutPequeño.class
 com\project\ControllerPreDetailed.class
 com\project\JsonReaderConsoles.class
+com\project\ControllerDetailed.class
 com\project\JsonReaderJocs.class
 com\project\JsonReaderPersonatges.class
 com\project\Personatge.class

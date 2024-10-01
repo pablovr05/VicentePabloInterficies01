@@ -59,9 +59,9 @@
                   <Text fx:id="colorText" layoutX="1.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="347.7367057800293" />
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+            <Pane prefHeight="89.0" prefWidth="0.0" GridPane.rowIndex="3">
                <children>
-                  <Text fx:id="gameTitle" layoutX="9.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="331.79998779296864">
+                  <Text fx:id="gameTitle" layoutX="12.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="311.79998779296864">
                      <font>
                         <Font size="10.0" />
                      </font></Text>

@@ -13,7 +13,6 @@ public class Personatge {
         this.nomDelVideojoc = nomDelVideojoc;
     }
 
-    // Getters para acceder a los atributos
     public String getNom() {
         return nom;
     }

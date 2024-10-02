@@ -48,16 +48,12 @@ public class ControllerLayoutGrande {
     private ImageView imageRender;
 
     public void initialize() {
-        // Agregar opciones al ComboBox
         comboBoxNintendo.getItems().addAll("Personatges", "Jocs", "Consoles");
 
-        // Seleccionar el primer valor por defecto
         comboBoxNintendo.getSelectionModel().selectFirst();
 
-        // Cargar el contenido por defecto
         cargarContenido(comboBoxNintendo.getSelectionModel().getSelectedItem());
 
-        // Agregar un listener al ComboBox para cambiar el contenido cuando se seleccione una opción
         comboBoxNintendo.setOnAction(event -> {
             String selectedOption = comboBoxNintendo.getSelectionModel().getSelectedItem();
             cargarContenido(selectedOption);
@@ -65,10 +61,8 @@ public class ControllerLayoutGrande {
     }
 
     private void cargarContenido(String opcionSeleccionada) {
-        // Limpiar el contenido anterior
         vBoxContent.getChildren().clear();
 
-        // Dependiendo de la opción seleccionada, cargar Personatges, Jocs o Consoles
         if (opcionSeleccionada.equals("Personatges")) {
             cargarPersonatges();
         } else if (opcionSeleccionada.equals("Jocs")) {
@@ -79,7 +73,6 @@ public class ControllerLayoutGrande {
     }
 
     private void cargarPersonatges() {
-        // Cargar el primer personaje por defecto
         if (!Main.llistaPersonatges.isEmpty()) {
             Personatge primerPersonatge = Main.llistaPersonatges.get(0);
             colorPane.setVisible(true);
@@ -91,7 +84,6 @@ public class ControllerLayoutGrande {
             titleText2.setText(primerPersonatge.getNomDelVideojoc());
         }
 
-        // Cargar todos los personajes en el VBox
         for (Personatge personatge : Main.llistaPersonatges) {
             crearPanel(personatge.getNom(), personatge.getImatge(), event -> {
                 colorPane.setVisible(true);
@@ -106,7 +98,6 @@ public class ControllerLayoutGrande {
     }
 
     private void cargarJocs() {
-        // Cargar el primer juego por defecto
         if (!Main.llistaJocs.isEmpty()) {
             Joc primerJoc = Main.llistaJocs.get(0);
             titleText.setText(primerJoc.getNom());
@@ -117,7 +108,6 @@ public class ControllerLayoutGrande {
             
         }
 
-        // Cargar todos los juegos en el VBox
         for (Joc joc : Main.llistaJocs) {
             crearPanel(joc.getNom(), joc.getImagen(), event -> {
                 titleText.setText(joc.getNom());
@@ -130,7 +120,6 @@ public class ControllerLayoutGrande {
     }
 
     private void cargarConsoles() {
-        // Cargar la primera consola por defecto
         if (!Main.listaConsoles.isEmpty()) {
             Consola primeraConsola = Main.listaConsoles.get(0);
             colorPane.setVisible(true);
@@ -139,11 +128,9 @@ public class ControllerLayoutGrande {
             colorPane.setBackground(new Background(new BackgroundFill(Color.web(primeraConsola.getColor()), CornerRadii.EMPTY, Insets.EMPTY)));
             colorPane.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(2))));
             colorText.setText(primeraConsola.getColor());
-            titleText2.setText("Data de salida: " + primeraConsola.getFechaLanzamiento());
-            
+            titleText2.setText("Data de salida: " + primeraConsola.getFechaLanzamiento());   
         }
 
-        // Cargar todas las consolas en el VBox
         for (Consola consola : Main.listaConsoles) {
             crearPanel(consola.getNom(), consola.getImagen(), event -> {
                 colorPane.setVisible(true);
@@ -157,14 +144,12 @@ public class ControllerLayoutGrande {
         }
     }
 
-    // Método para crear un panel dinámico con una imagen, nombre y botón
     private void crearPanel(String nombre, String rutaImagen, EventHandler<ActionEvent> eventHandler) {
         Pane panel = new Pane();
         panel.setPrefHeight(80);
         panel.setMinHeight(80);
         panel.setStyle("-fx-background-color: white; -fx-padding: 10;");
 
-        // Cargar la imagen
         String path = "/assets/images/" + rutaImagen;
         Image image = new Image(getClass().getResourceAsStream(path));
 
@@ -173,22 +158,17 @@ public class ControllerLayoutGrande {
         imageView.setFitHeight(70);
         imageView.setPreserveRatio(true);
 
-        // Texto con el nombre
         Text text = new Text(nombre);
 
-        // Crear un HBox para contener la imagen y el texto
         HBox hbox = new HBox(imageView, text);
         hbox.setSpacing(10);
         
-        // Hacer que el panel sea clicable
         panel.setOnMouseClicked(event -> {
             eventHandler.handle(new ActionEvent());
         });
 
-        // Agregar el HBox al panel
         panel.getChildren().add(hbox);
 
-        // Agregar el panel al VBox
         vBoxContent.getChildren().add(panel);
     }
 }

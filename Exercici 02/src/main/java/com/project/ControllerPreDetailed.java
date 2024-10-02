@@ -114,7 +114,7 @@ public class ControllerPreDetailed {
    }
 
    private void crearPanel(String nombre, String rutaImagen, EventHandler<ActionEvent> eventHandler) {
-    Pane panel = new Pane(); // Cambia a un tipo de contenedor que prefieras, como HBox o VBox
+    Pane panel = new Pane(); 
     panel.setPrefHeight(80);
     panel.setMinHeight(80);
     panel.setStyle("-fx-background-color: white; -fx-padding: 10;");
@@ -137,7 +137,7 @@ public class ControllerPreDetailed {
     hbox.setSpacing(10);
     panel.getChildren().add(hbox);
 
-    vBoxContainer.getChildren().add(panel); // Añade el panel al VBox
+    vBoxContainer.getChildren().add(panel); 
     }
 
     private void cambiarPantallaDetailed() {
